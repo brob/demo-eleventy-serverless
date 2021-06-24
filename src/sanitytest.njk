@@ -6,8 +6,8 @@ pagination:
     size: 1
     serverless: eleventy.serverless.path.slug
 permalink: 
-    build: "/madlibs/{{madlib.slug}}/"
     test: "/madlibs/:slug/"
+    build: "/madlibs/{{madlib.slug}}"
 ---
 
 {{ page | dump(2) }}

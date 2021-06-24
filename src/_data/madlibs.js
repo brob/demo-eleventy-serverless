@@ -12,8 +12,10 @@ module.exports = async function() {
     const madlibs = await client.fetch(query);
 
     const preppedMadlib = madlibs.map(prepText)
-    console.log(preppedMadlib.length)
-    return preppedMadlib
+
+    const mapLibs = preppedMadlib.map(item => ([item.slug, item]))
+    const objLibs = Object.fromEntries(mapLibs)
+    return objLibs
 
 }
 
