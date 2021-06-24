@@ -6,6 +6,10 @@ module.exports = function(eleventyConfig) {
 		name: "serverless",
 		functionsDir: "./netlify/functions/",
 	});
+	eleventyConfig.addPlugin(EleventyServerlessBundlerPlugin, {
+		name: "test",
+		functionsDir: "./netlify/functions/",
+	});
 
 	// Fully dynamic template for comparison
 	eleventyConfig.addPlugin(EleventyServerlessBundlerPlugin, {

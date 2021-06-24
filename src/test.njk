@@ -1,0 +1,34 @@
+---js
+{
+	layout: "layout.njk",
+	localdata: "I am Local Data tester",
+	now: (new Date()).toISOString(),
+	permalink: {
+		build: "/test/",
+		test: "/test/:slug/",
+	}
+}
+---
+<h1>Welcome to Eleventy Serverless tester</h1>
+
+<ul>
+	<li><a href="/test/">Template render at Build Time</a></li>
+	<li><a href="/test/tester/">Template render on first-request only (On-demand Builder)</a></li>
+</ul>
+
+<p>{{ localdata }}</p>
+<p>{{ globaldata }}</p>
+<p>{% include "include.njk" %}</p>
+
+<h2><code>new Date()</code></h2>
+<pre>{{ now }}</pre>
+
+<h2><code>eleventy</code> Data:</h2>
+<pre>{{ eleventy | dump(2) }}</pre>
+
+<h2><code>eleventy</code> Data:</h2>
+<pre>{{ madlibs | dump(2) }}</pre>
+
+<footer>
+	<a href="https://github.com/11ty/demo-eleventy-serverless">Back to the <code>demo-eleventy-serverless</code> GitHub repo</a>
+</footer>

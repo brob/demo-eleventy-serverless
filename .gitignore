@@ -4,5 +4,9 @@ _site
 .cache
 netlify/functions/serverless/*
 !netlify/functions/serverless/index.js
+netlify/functions/test/*
+!netlify/functions/test/index.js
 netlify/functions/dynamic/*
 !netlify/functions/dynamic/index.js
+netlify/functions/something/*
+!netlify/functions/something/index.js

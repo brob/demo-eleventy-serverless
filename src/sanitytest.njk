@@ -1,0 +1,24 @@
+---
+title: "Sanity Page"
+pagination:
+    data: madlibs
+    alias: madlib
+    size: 1
+    serverless: eleventy.serverless.path.slug
+permalink: 
+    build: "/madlibs/{{madlib.slug}}/"
+    test: "/madlibs/:slug/"
+---
+
+{{ page | dump(2) }}
+<h2><code>page</code> Data:</h2>
+<pre>{{ page | dump(2) }}</pre>
+
+<h2><code>eleventy</code> Data:</h2>
+<pre>{{ eleventy | dump(2) }}</pre>
+
+
+<h2>title? {{madlib.title}}</h2>
+<div>
+{{ madlib.htmlText | safe }}
+</div>

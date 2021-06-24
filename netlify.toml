@@ -3,15 +3,36 @@ publish = "_site"
 command = "npm run build-production"
 
 [[redirects]]
-from = "/:slug/dynamic/"
+from = "/start/:slug/dynamic/"
 to = "/.netlify/functions/dynamic"
 status = 200
 force = true
 _generated_by_eleventy_serverless = "dynamic"
 
 [[redirects]]
-from = "/:slug/"
+from = "/test/:slug/"
+to = "/.netlify/functions/test"
+status = 200
+force = true
+_generated_by_eleventy_serverless = "test"
+
+[[redirects]]
+from = "/madlibs/:slug/"
+to = "/.netlify/functions/test"
+status = 200
+force = true
+_generated_by_eleventy_serverless = "test"
+
+[[redirects]]
+from = "/start/:slug/"
 to = "/.netlify/functions/serverless"
 status = 200
 force = true
 _generated_by_eleventy_serverless = "serverless"
+
+[[redirects]]
+from = "/something-else/:slug/"
+to = "/.netlify/functions/something"
+status = 200
+force = true
+_generated_by_eleventy_serverless = "something"
